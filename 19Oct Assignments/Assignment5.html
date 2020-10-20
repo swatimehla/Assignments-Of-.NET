@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+</head>
+<body id="b1">
+    <script>
+        function func_name()
+        {
+            alert("You have clicked Button");
+        }
+
+        function f2()
+        {
+            document.getElementById('h1').innerHTML = "This is change by using javascript";
+        }
+
+        function f3()
+        {
+            document.getElementById('img1').width = '100';
+        }
+        function BackgroundColor()
+        {
+            document.getElementById('b1').style.backgroundColor = 'Red';
+        }
+
+        var age = 20;
+        var fname = "swati";
+        var lname = "mehla";
+        document.write("This is age : " + age);
+       // window.alert("This is Name : " + fname);
+
+        if (age > 18)
+        {
+            document.write("Valid for vote");
+        }
+        else
+        {
+            document.write("Not Valid for wait")
+        }
+
+        function Display_name()        
+        {
+            var table = document.calculate.n1.value;
+            var limit = document.calculate.n2.value;
+
+            for (var i = 1; i <= limit; i++)
+            {
+                var res = table * i;
+                document.write(table +"*"+ i+"="+res+"<br>");
+            }
+            //alert("Value is : " + n);
+            //window.alert("Value is : " + n);
+        }
+    </script>
+
+    <h1 id="h1">This is Javascript</h1>
+    <img src="bgimg.jpg" height="500" width="500" id="img1" />
+    <button onclick="func_name()">Click me</button>
+    <button onclick="f2()">Click me for change content</button>
+    <button onclick="f3()">Click For change Image </button>
+    <button onclick="BackgroundColor()" >Click me for change background</button>
+
+    <form name="calculate" onsubmit="Display_name()">
+       Enter Table : <input type="text" name="n1" /><br />
+       Enter Limit : <input type="text" name="n2" />
+        <input type="submit"  value="submit" />
+
+    </form>
+</body>
+</html>

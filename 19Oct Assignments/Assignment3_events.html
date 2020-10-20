@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function eventmouseover(color)
+        {
+            color.innerHTML = "Mouse Over Me";
+        }
+
+        function eventmouseout(color) {
+            color.innerHTML = "Mouse Out";
+        }
+
+        function eventmouseup(color) {
+            color.innerHTML = "Mouse up";
+        }
+
+        function eventmousedown(color) {
+            color.innerHTML = "Mouse down";
+        }
+
+        function eventmousemove(color) {
+            color.innerHTML = "Mouse move";
+        }
+
+
+    </script>
+
+    <div style="background-color:indianred;width:170px;height:50px" onmouseout="eventmouseout(this)" onmouseover="eventmouseover(this)">This is DIV</div>
+    <br /><br />
+    <div style="background-color:greenyellow;width:170px;height:50px" onmousemove="eventmousemove(this)">This is div</div>
+    <br /><br />
+
+    <div style="background-color:aqua;width:170px;height:50px"  onmouseup="eventmouseup(this)" onmousedown="eventmousedown(this)">This is DIV</div>
+
+    <h2>Javascript object into a JSON string, and send it to the server</h2>
+    <p id="demo" >This is p tag content</p>
+
+    <script>
+        //
+        person = {
+            name: "swati",
+            age: 23,
+            city: "banglore"
+        };
+        document.getElementById("demo").innerHTML = person.name;
+    </script>
+
+</body>
+</html>

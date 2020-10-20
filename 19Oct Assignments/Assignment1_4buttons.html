@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <style>
+        .changeh1
+        {
+            font-size: 20px;
+            font-family:'Times New Roman', Times, serif;
+            font :bold;
+            color:blueviolet;
+            font-style:oblique;
+        }
+
+        .changeh2
+        {
+            font-style:italic;
+            font:bold;
+            color:brown;
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:30px;
+        }
+
+        .changeh3
+        {
+            font-feature-settings:"liga";
+            font-style:normal;
+            font-size:large;
+            font-family:'Edwardian Script ITC';
+            color:aqua;
+        }
+        .changeh4
+        {
+            font-kerning:inherit;
+            font-family:'Lucida Sans';
+            font-size:medium;
+            font-style:italic;
+            color:blue;
+        }
+
+        .changeh5
+        {
+            enable-background:accumulate;
+            color:red;
+            font-size:20px;
+            font-family:Arial;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function Button1()
+        {
+            alert("You have clicked Button1");
+            document.getElementById("btn2").disabled = false;
+            document.getElementById("btn1").disabled = true;
+        }
+
+        function Button2()
+        {
+            alert("Programming Once");
+            document.getElementById("btn3").disabled = false;
+            document.getElementById("btn2").disabled = true;
+        }
+
+        function Button3()
+        {
+            alert("Programming is Fun");
+            document.getElementById("btn4").disabled = false;
+            document.getElementById("btn3").disabled = true;
+        }
+
+        function Button4(buttonid)
+        {
+            alert("Javascript is FUN");
+            buttonid.disabled = true;
+        }
+
+        function Button5(buttonid)
+        {                   
+            document.getElementById("h1").classList.add("changeh1");
+            document.getElementById("h2").classList.add("changeh2");
+            document.getElementById("h3").classList.add("changeh3");
+            document.getElementById("h4").classList.add("changeh4");
+            document.getElementById("h5").classList.add("changeh5");
+            alert("You clicked on button and its will disabled");
+            buttonid.disabled = true;
+        }
+
+        function Button6()
+        {
+            alert("This is onload");
+            document.getElementById("pid").innerHTML = "This is OnLoad Event of Javascript";
+        }
+
+    </script>
+
+    <button id="btn1" onclick="Button1()" >Button1</button>
+    <button id="btn2"  onclick="Button2()" disabled>Button2</button>
+    <button id="btn3" onclick="Button3()" disabled>Button3</button>
+    <button id="btn4" onclick="Button4(this)" disabled>Button4</button>
+    <br />
+    <h1 id="h1">Hello world</h1>
+    <h2 id="h2">Programming is fun</h2>
+    <h3 id="h3">Javascript is Easy</h3>
+    <h4 id="h4">Javascript is Fun</h4>
+    <h5 id="h5">Hello Javascript</h5>
+    <br />
+    <button id="btn5" onclick="Button5(this)">Button5</button>
+
+    <p id="pid"></p>
+    <button id="btn6" onload="Button6()">OnLoad</button>
+</body>
+</html>

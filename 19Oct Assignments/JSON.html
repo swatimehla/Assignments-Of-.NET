@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div
+        {
+            margin:auto;
+            background-color:antiquewhite;
+            width:500px;
+            height :100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+
+        var result = 0;
+        function Addition()
+        {
+            var num1 = document.getElementsByName('n1').value;
+            var num2 = document.getElementsByName('n2').value;
+            result = Number(num1) +  Number(num2);
+            alert( Number(result));
+        }
+        document.write("Pattern1----------------<br>");
+        for (var i = 1; i <= 5; i++)
+        {
+            for (j = 1; j <= i; j++)
+            {
+                document.write(j);
+            }
+            document.write("<br>");
+        }
+
+        document.write("Pattern2-----------------<br>");
+        var count =1;
+        for (var i = 1; i <= 4; i++) {
+            for (j = 1 ; j <= i; j++) {
+                document.write(count);
+                count++;
+            }
+            document.write("<br>");
+        }
+
+        document.write("Pattern3-----------------<br>");
+        for (var i = 1; i <= 5; i++) {
+            if (i == 1 || i == 5 ) {
+                for (var j = 1; j <= 5; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+             
+            else {
+                for (var j = 1; j <= 5; j++) {
+                    if (j == 1 || j == 5) {
+                        document.write("*");
+                    }
+                    else {
+                        document.write("&nbsp;&nbsp");
+                    }
+                }
+                document.write("<br>");
+             }
+        }
+
+        document.write("Pattern4------------------<br>");
+        for (i = 1; i <= 5; i++)
+        {
+            for (j = 1; j <= i; j++)
+            {
+                if (j == i)
+                {
+                    document.write("*");
+                }
+                else
+                {
+                    document.write("&nbsp;&nbsp");
+                }
+               // document.write("<br");
+            }
+            document.write("<br>");
+        }
+
+        document.write("Pattern5-------------------<br>");
+        for (i = 1; i <= 5; i++)
+        {
+            for (j = 1; j <= 5; j++)
+            {
+                if (j == i||j==(5+1-i))
+                {
+                    document.write("*");
+                }
+                else
+                {
+                    document.write("&nbsp;&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+
+        //objrct creation by object Literal
+        document.write("Zomato object <br>");
+        Zomato = { CustomerId:4, CustomerName: "Ram", Order: "Pizza" };
+        document.write("Customer Id : " + Zomato.CustomerId);
+        document.write("<br>Customer Name : " + Zomato.CustomerName);
+        document.write("<br>Order : " + Zomato.Order);
+
+        //Object creation Using New keyword
+        var employee = new Object();
+        employee.EId = 20;
+        employee.EName = "sham";
+        employee.Age = 30;
+        document.write("<br>Emp Id : " + employee.EId);
+        document.write("<br>Emp Name : " + employee.EName);
+        document.write("<br>Age : " + employee.Age);
+
+        //object creation using Constructor
+        function emp(id, name, age)
+        {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+        empobj = new emp(5, "Aman", 29);
+        document.write("<br>Emp Id : " + empobj.id);
+        document.write("<br>Emp Name : " + empobj.name);
+        document.write("<br>Age : " + empobj.age);
+
+        //Array in Jvavascript
+        document.write("Array Implemetation : ")
+        var marks = [50, 60, 78, 98, 57];
+        var highest, lowest, average = 0, total = 0;
+        document.write("<br>Array eleents are : " + "<br>");
+        for (i = 0; i < 5; i++)
+        {
+            document.write(marks[i] + "&nbsp");
+        }
+        for (i = 0; i < 4; i++)
+        {
+            if (marks[i] > marks[i + 1])
+            {
+                highest = marks[i];
+                lowest = marks[i + 1];
+            }
+            else
+            {
+                highest = marks[i + 1];
+                lowest = marks[i];
+            }
+        }
+        document.write("<br>Highest Element is : " + highest);
+        document.write("<br>Lowest Elemnet is : " + lowest);
+
+        for (i = 0; i < 5; i++)
+        {
+            total = total + marks[i];
+        }
+        document.write("<br>Total Marks is : " + total);
+        average = total / 5
+        document.write("<br>Average marks is : " + average);
+
+
+        //Find EVEN ODD
+        document.write("<br><br>Find EVEN ODD : ");
+        var arr = [10, 20, 33, 40, 25];
+        var even=0, odd=0;
+        for (i = 0; i < 5; i++)
+        {
+            if (arr[i] % 2 == 0)
+            {
+                even = even + arr[i];
+            }
+            else
+            {
+                odd = odd + arr[i];
+            }
+              
+        }
+        document.write("<br>Even sum : " + even);
+        document.write("<br>Odd Sum : " + odd);
+
+        function dbclick()
+        {
+            alert("You have double click on Button");
+        }
+
+        function mouseover() {
+            alert("You have mouse over on Button");
+        }
+        function mouseout() {
+            alert("You have mouse out from Button");
+        }
+    </script>
+
+    <div >
+       <form id="Calculate" >
+    <label>Enter Number1 : </label>
+    <input type="text" name="n1"/> <br />
+    <label>Enter Number2 : </label>
+    <input type="text" name="n2"/><br />
+    <input type="submit" value="Submit" />
+    <button onclick="Addition()" >Add</button>
+    <button onclick="Subtraction()">Sub</button>
+    <button onclick="Multiply()">Mul</button>
+    <button onclick="Division()">Div</button>
+           <button ondblclick="dbclick()">dbclick</button>
+           <button onmouseover="mouseover()">mouseover</button>
+           <button onmouseout="mouseout()">mouseout</button>
+       </form>
+    </div>
+</body>
+</html>
