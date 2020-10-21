@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title></title>
+    <style>
+        .change
+        {
+            background-color:darkcyan;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .div1class{
+            background-color:rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function () {
+            //Get method
+            $("#btn1").click(function () {
+                alert($("#anchor1").attr("href"));
+            });
+            $("#btn2").click(function () {
+                alert($("#name").attr("value"));
+            });
+
+            //Set method
+            $("#btn3").click(function () {
+                $("#p1").text("<b>Hello world!<b>");
+            });
+            $("#btn4").click(function () {
+                $("#p2").html("<b>Hello world!</b>");
+            });
+
+            //Add method
+
+            $("#btn5").click(function () {
+                $("#p3").addClass("change");
+            });
+            //append
+            $("#btn6").click(function () {
+                $("#p1").append("This is append text added with Paragraph1");
+            });
+
+            //prepend
+            $("#btn7").click(function () {
+                $("#p2").prepend("This is prepend text with Pargraph2. ");
+            });
+
+            //after
+            $("#btn8").click(function () {
+                $("#p1").after("This text After Pargraph1. ");
+            });
+
+            //before
+            $("#btn9").click(function () {
+                $("#p2").before("This text Before Paragraph2. ");
+            });
+
+            //empty method
+            $("#btn10").click(function () {
+                $("#div1").empty();
+            });
+
+            //remove method
+            $("#btn11").click(function () {
+                $("#div1").remove();
+            });
+
+        });
+
+       
+    </script>
+   <!--get Method-->
+    <button id="btn1">Click to GET attribute</button>
+    <a id="anchor1" href="https://www.google.com/">Google</a>
+    <br /><br />
+    Name: <input type="text" id="name" value="Mickey Mouse">
+    <button id="btn2">Show name</button>
+
+    <!--set Method-->
+    <p id="p1">This is paragraph1</p>
+    <p id="p2">This is paragraph2</p>
+    <p id="p3">This is paragraph3</p>
+    <button id="btn3">Click to set text</button>
+    <button id="btn4">Click to set HTML</button>
+
+    <!--Add Methods-->
+    <button id="btn5">Click to Add class</button>
+    <button id="btn6">To append</button>
+    <button id="btn7">To pretend</button>
+    <button id="btn8">Add after</button>
+    <button id="btn9">Add Before</button><br /><br />
+
+    <!--Remove Methods it removes selected elements with its child elements-->
+    <div id="div1" class="div1class" style=" width:300px;height:100px;">
+        <h1>This is child of div</h1>
+        <h2>This is second child of div</h2>
+        <h3>This is third child of div</h3>
+    </div>
+    <button id="btn10" >Remove div childrens </button>
+    <button id="btn11">Remove complete div</button>   
+</body>
+</html>
