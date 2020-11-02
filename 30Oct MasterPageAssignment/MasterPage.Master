@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="UsingMasterPage.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color:gainsboro" class="header" >
+            <nav class="navbar navbar-light navbar-expand-lg">
+                <a class="navbar-brand" href="Home.aspx" style="text-decoration:none">Home</a>
+                <a class="navbar-brand" href="AboutUs.aspx" style="text-decoration:none">About Us</a>
+                <a class="navbar-brand"  href="Courses.aspx" style="text-decoration:none">Courses</a>
+                <a class="navbar-brand" href="Article.aspx" style="text-decoration:none">Article</a>
+                <a class="navbar-brand" href="contactus.aspx" style="text-decoration:none">Contact us</a>
+
+            </nav>
+        </div>
+        
+        <div style="height:450px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="panel-footer" style="background-color:antiquewhite; align-content:center" >
+          <footer>
+            This is Footer 
+            <p>&copy  All rights Reversed</p>
+            <a class="footerlinks" href="#" target="_blank">Simple snipts</a>
+           </footer>
+          </div>
+    </form>
+</body>
+</html>
